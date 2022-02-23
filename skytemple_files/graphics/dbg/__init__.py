@@ -15,3 +15,6 @@
 #  You should have received a copy of the GNU General Public License
 #  along with SkyTemple.  If not, see <https://www.gnu.org/licenses/>.
 
+DBG_TILING_DIM = 3
+DBG_CHUNK_WIDTH = 24
+DBG_WIDTH_AND_HEIGHT = 32

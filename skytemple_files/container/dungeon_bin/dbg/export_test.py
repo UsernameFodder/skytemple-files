@@ -29,8 +29,8 @@ from skytemple_files.compression_container.common_at.model import CommonAt
 from itertools import islice
 
 from skytemple_files.container.sir0.handler import Sir0Handler
-from skytemple_files.graphics.dpl.model import Dpl
-from skytemple_files.graphics.dpla.model import Dpla
+from skytemple_files.graphics.dpl._model import Dpl
+from skytemple_files.graphics.dpla._model import Dpla
 
 output_dir = os.path.join(os.path.dirname(__file__), 'dbg_output')
 base_dir = os.path.join(os.path.dirname(__file__), '..', '..', '..', '..', '..')

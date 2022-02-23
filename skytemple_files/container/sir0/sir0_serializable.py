@@ -15,12 +15,13 @@
 #  You should have received a copy of the GNU General Public License
 #  along with SkyTemple.  If not, see <https://www.gnu.org/licenses/>.
 from abc import ABC, abstractmethod
-from typing import List, Tuple, Optional
+from typing import List, Tuple, Optional, Protocol, runtime_checkable
 
 from skytemple_files.common.ppmdu_config.data import Pmd2Data
 
 
-class Sir0Serializable(ABC):
+@runtime_checkable
+class Sir0Serializable(Protocol):
     @abstractmethod
     def sir0_serialize_parts(self) -> Tuple[bytes, List[int], Optional[int]]:
         """

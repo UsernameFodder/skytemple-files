@@ -15,3 +15,13 @@
 #  You should have received a copy of the GNU General Public License
 #  along with SkyTemple.  If not, see <https://www.gnu.org/licenses/>.
 
+# Length of a palette in colors.
+DPL_PAL_LEN = 16
+# Maximum number of palettes
+DPL_MAX_PAL = 12
+# Number of color bytes per palette entry. Fourth is always 0x00.
+DPL_PAL_ENTRY_LEN = 4
+# Size of a single palette in bytes
+DPL_PAL_SIZE = DPL_PAL_LEN * DPL_PAL_ENTRY_LEN
+# The value of the fourth color
+DPL_FOURTH_COLOR = 128

@@ -31,7 +31,6 @@ from skytemple_files.container.dungeon_bin.sub.sir0_pkdpx import DbinSir0PkdpxHa
 from skytemple_files.container.dungeon_bin.sub.sir0_image_1033 import DbinSir0Image1033Handler
 from skytemple_files.container.dungeon_bin.sub.sir0_pkdpx_dbg import DbinSir0PkdpxDbgHandler
 from skytemple_files.container.dungeon_bin.sub.sir0_weird_data_file import DbinSir0WeirdDataFileHandler
-from skytemple_files.container.dungeon_bin.sub.sir0_dpla import DbinSir0DplaHandler
 from skytemple_files.container.sir0.handler import Sir0Handler
 from skytemple_files.data.item_s_p.handler import ItemSPHandler
 from skytemple_files.data.level_bin_entry.handler import LevelBinEntryHandler
@@ -167,7 +166,7 @@ class FileType:
     FIXED_BIN = FixedBinHandler
     
     # dungeon.bin sub file handlers
-    DBIN_SIR0_DPLA = DbinSir0DplaHandler
+    DBIN_SIR0_DPLA = DplaHandler
     DBIN_SIR0_AT4PX_DMA = DbinSir0At4pxDmaHandler
     DBIN_AT4PX_DPC = DbinAt4pxDpcHandler
     DBIN_AT4PX_DPCI = DbinAt4pxDpciHandler
