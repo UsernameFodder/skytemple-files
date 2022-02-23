@@ -55,11 +55,11 @@ from skytemple_files.data.md.model import Md
 from skytemple_files.graphics.bma.protocol import BmaProtocol
 from skytemple_files.graphics.bpc import BPC_TILE_DIM
 from skytemple_files.graphics.dma.dma_drawer import DmaDrawer
-from skytemple_files.graphics.dma._model import Dma
-from skytemple_files.graphics.dpc._model import Dpc
-from skytemple_files.graphics.dpci._model import Dpci
-from skytemple_files.graphics.dpl._model import Dpl
-from skytemple_files.graphics.dpla._model import Dpla
+from skytemple_files.graphics.dma.protocol import DmaProtocol
+from skytemple_files.graphics.dpc.protocol import DpcProtocol
+from skytemple_files.graphics.dpci.protocol import DpciProtocol
+from skytemple_files.graphics.dpl.protocol import DplProtocol
+from skytemple_files.graphics.dpla.protocol import DplaProtocol
 from skytemple_files.hardcoded.dungeons import HardcodedDungeons
 from skytemple_files.hardcoded.ground_dungeon_tilesets import HardcodedGroundDungeonTilesets, GroundTilesetMapping
 from skytemple_files.script.ssa_sse_sss.actor import SsaActor
@@ -168,11 +168,11 @@ def draw_dungeon_map_bgs(rom, dungeon_map_bg_dir, config):
             raise ValueError("Unknown unk2")
         if tileset_id == 170:
             tileset_id = 1
-        dma: Dma = dungeon_bin.get(f'dungeon{tileset_id}.dma')
-        dpl: Dpl = dungeon_bin.get(f'dungeon{tileset_id}.dpl')
-        dpla: Dpla = dungeon_bin.get(f'dungeon{tileset_id}.dpla')
-        dpci: Dpci = dungeon_bin.get(f'dungeon{tileset_id}.dpci')
-        dpc: Dpc = dungeon_bin.get(f'dungeon{tileset_id}.dpc')
+        dma: DmaProtocol = dungeon_bin.get(f'dungeon{tileset_id}.dma')
+        dpl: DplProtocol = dungeon_bin.get(f'dungeon{tileset_id}.dpl')
+        dpla: DplaProtocol = dungeon_bin.get(f'dungeon{tileset_id}.dpla')
+        dpci: DpciProtocol = dungeon_bin.get(f'dungeon{tileset_id}.dpci')
+        dpc: DpcProtocol = dungeon_bin.get(f'dungeon{tileset_id}.dpc')
 
         bma: BmaProtocol = bg_list.level[level.mapid].get_bma(rom)
 
