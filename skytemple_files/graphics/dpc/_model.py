@@ -124,4 +124,4 @@ class Dpc(DpcProtocol[Dpci]):
     def re_fill_chunks(self):
         if len(self.chunks) > 400:
             raise ValueError(_("A dungeon background or tilemap can not have more than 400 chunks."))
-        self.chunks += [[TilemapEntry.from_int(u16(0)) for _ in range(0, 9)]] * (400 - len(self.chunks))
+        self.chunks += [[TilemapEntry.from_int(u16(0)) for _ in range(0, 9)]] * (400 - len(self.chunks))  # type: ignore

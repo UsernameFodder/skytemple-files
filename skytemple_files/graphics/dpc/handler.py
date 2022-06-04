@@ -34,7 +34,7 @@ class DpcHandler(HybridDataHandler[DpcProtocol]):
 
     @classmethod
     def load_native_model(cls) -> Type[DpcProtocol]:
-        from skytemple_rust.st_dpc import Dpc
+        from skytemple_rust.st_dpc import Dpc  # pylint: disable=no-name-in-module,no-member,import-error
         # Tilemap protocol issue:
         return Dpc  # type: ignore
 
@@ -45,7 +45,7 @@ class DpcHandler(HybridDataHandler[DpcProtocol]):
 
     @classmethod
     def load_native_writer(cls) -> Type[WriterProtocol['NativeDpc']]:  # type: ignore
-        from skytemple_rust.st_dpc import DpcWriter
+        from skytemple_rust.st_dpc import DpcWriter  # pylint: disable=no-name-in-module,no-member,import-error
         return DpcWriter
 
     @classmethod

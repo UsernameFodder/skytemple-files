@@ -34,7 +34,7 @@ class DplHandler(HybridDataHandler[DplProtocol]):
 
     @classmethod
     def load_native_model(cls) -> Type[DplProtocol]:
-        from skytemple_rust.st_dpl import Dpl
+        from skytemple_rust.st_dpl import Dpl  # pylint: disable=no-name-in-module,no-member,import-error
         return Dpl
 
     @classmethod
@@ -44,7 +44,7 @@ class DplHandler(HybridDataHandler[DplProtocol]):
 
     @classmethod
     def load_native_writer(cls) -> Type[WriterProtocol['NativeDpl']]:  # type: ignore
-        from skytemple_rust.st_dpl import DplWriter
+        from skytemple_rust.st_dpl import DplWriter  # pylint: disable=no-name-in-module,no-member,import-error
         return DplWriter
 
     @classmethod

@@ -34,7 +34,7 @@ class DbgHandler(HybridDataHandler[DbgProtocol]):
 
     @classmethod
     def load_native_model(cls) -> Type[DbgProtocol]:
-        from skytemple_rust.st_dbg import Dbg
+        from skytemple_rust.st_dbg import Dbg  # pylint: disable=no-name-in-module,no-member,import-error
         return Dbg
 
     @classmethod
@@ -44,7 +44,7 @@ class DbgHandler(HybridDataHandler[DbgProtocol]):
 
     @classmethod
     def load_native_writer(cls) -> Type[WriterProtocol['NativeDbg']]:  # type: ignore
-        from skytemple_rust.st_dbg import DbgWriter
+        from skytemple_rust.st_dbg import DbgWriter  # pylint: disable=no-name-in-module,no-member,import-error
         return DbgWriter
 
     @classmethod
